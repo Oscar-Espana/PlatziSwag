@@ -11,7 +11,7 @@ const cancelado = () => {
         <h2>Compra Cancelada</h2>
         <p>Lamentamos que no hayas podido comprar tu swag</p>
         <p>!Te esperamos de vuelta! </p>
-        <span rol="img" aria-label="emoji">
+        <span role="img" aria-label="emoji">
           💖💖
         </span>
         <Link to="/">
