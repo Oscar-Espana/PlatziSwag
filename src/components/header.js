@@ -1,21 +1,33 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { MenuItem, StyledHeader } from "../styles/components"
+import logo from "../images/Logo.png"
+import bolsa from "../images/cart.png"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <StyledHeader>
+    <Link to="/">
+      <img src={logo} alt="Logo Platzi Swag" />
+    </Link>
+    <nav>
+      <ul>
+        <MenuItem margin>
+          <Link to="/">Productos</Link>
+        </MenuItem>
+        <MenuItem margin>
+          <a href="https://www.platzi.com">Platzi</a>
+        </MenuItem>
+        <MenuItem>
+          <Link to="/cart">
+            <span>
+              <img src={bolsa} alt="Cart Logo "></img>
+            </span>
+          </Link>
+        </MenuItem>
+      </ul>
+    </nav>
+    <div>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -28,7 +40,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-  </header>
+  </StyledHeader>
 )
 
 Header.propTypes = {
